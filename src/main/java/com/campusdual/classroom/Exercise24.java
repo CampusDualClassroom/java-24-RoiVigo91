@@ -13,16 +13,14 @@ public class Exercise24 {
         return queue;
     }
     public static void printAndEmptyQueue(Queue<String> queue) {
-        while (!queue.isEmpty()) {
-            System.out.println(queue.peek());
-            queue.poll();
-        }
+        queue.forEach(System.out::println);
+        queue.clear();
     }
+
 
     public static void main(String[] args) {
-        Queue<String> queue = createQueue();
-        printAndEmptyQueue(queue);
-
+        printAndEmptyQueue(createQueue());
     }
+
 
 }
